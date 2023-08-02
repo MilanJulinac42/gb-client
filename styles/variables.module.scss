@@ -1,3 +1,4 @@
+// Colors
 $primary-color: #b2d8d8;
 $secondary-coral-color: #f08e8e;
 $secondary-yellow-color: #fff2cc;
@@ -5,6 +6,31 @@ $secondary-gray-color: #efefef;
 $text-color: #333333;
 $background-cream-color: #fffff0;
 $background-pale-green-color: #d4f2f2;
+
+// Spacing
+$base-spacing-unit: 8px;
+$small-spacing: $base-spacing-unit / 2;
+$medium-spacing: $base-spacing-unit;
+$large-spacing: $base-spacing-unit * 1.5;
+
+// Margins and Padding
+$default-margin: $base-spacing-unit;
+$default-padding: $base-spacing-unit;
+
+$small-margin: $base-spacing-unit / 2;
+$small-padding: $base-spacing-unit / 2;
+
+$large-margin: $base-spacing-unit * 1.5;
+$large-padding: $base-spacing-unit * 1.5;
+
+// Border Radius
+$default-border-radius: 4px;
+$large-border-radius: 8px;
+
+// Z-Index
+$z-index-modal: 1000;
+$z-index-dropdown: 900;
+$z-index-sticky: 800;
 
 .container {
 	color: $text-color;

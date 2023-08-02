@@ -6,7 +6,7 @@ import variables from "../styles/variables.module.scss";
 
 const Home: NextPage = () => {
 	return (
-		<div className={styles.container}>
+		<div className={variables.container}>
 			<Head>
 				<title>Create Next App</title>
 				<meta

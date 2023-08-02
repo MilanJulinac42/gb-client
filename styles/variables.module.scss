@@ -1,5 +1,18 @@
-$primary-color: #64ff00;
+$primary-color: #b2d8d8;
+$secondary-coral-color: #f08e8e;
+$secondary-yellow-color: #fff2cc;
+$secondary-gray-color: #efefef;
+$text-color: #333333;
+$background-cream-color: #fffff0;
+$background-pale-green-color: #d4f2f2;
+
+.container {
+	color: $text-color;
+	background-color: $background-cream-color;
+}
 
 .title {
-	color: $primary-color;
+	font-family: var(--font-zilla);
+	color: $secondary-coral-color;
+	font-size: 32px;
 }

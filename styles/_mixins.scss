@@ -28,3 +28,16 @@
 		height: 100%;
 	}
 }
+
+$breakpoints: (
+	small: 576px,
+	medium: 768px,
+	large: 992px,
+	xlarge: 1200px,
+);
+
+@mixin breakpoint($point) {
+	@media only screen and (min-width: map-get($breakpoints, $point)) {
+		@content;
+	}
+}

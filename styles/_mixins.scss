@@ -1,0 +1,11 @@
+@mixin font-size($size) {
+	font-size: $size;
+
+	@include breakpoint(medium) {
+		font-size: $size * 1.2;
+	}
+
+	@include breakpoint(large) {
+		font-size: $size * 1.5;
+	}
+}

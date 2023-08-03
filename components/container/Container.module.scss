@@ -1,0 +1,15 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.pageContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contentContainer {
+	@include breakpoint("xlarge") {
+		width: 90%;
+	}
+}

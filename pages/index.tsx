@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../layout/header/Header";
+import Container from "../components/container/Container";
 
 const Home: NextPage = () => {
 	return (
@@ -16,6 +17,11 @@ const Home: NextPage = () => {
 			</Head>
 
 			<Header></Header>
+			<main>
+				<Container>
+					<p>random</p>
+				</Container>
+			</main>
 		</div>
 	);
 };

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Logo from "../../components/logo/Logo";
 import styles from "./Header.module.scss";
-import { zilla } from "../../pages/_app";
 
 const Header: React.FC = () => {
 	return (

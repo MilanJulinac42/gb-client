@@ -1,31 +1,46 @@
-/* Header.module.scss */
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .header {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 16px;
-	background-color: #f0f0f0;
+	flex-direction: column;
+	color: $text-color;
+	background-color: $primary-color;
+	background-color: $secondary-coral-color;
+	background-color: $secondary-yellow-color;
+	background-color: $secondary-gray-color;
+	background-color: $logo-color;
+	background-color: $background-pale-green-color;
 	text-transform: uppercase;
 
-	&__logo {
-		img {
-			max-height: 40px;
-		}
+	@include breakpoint("medium") {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 8px;
 	}
 
 	&__navigation {
 		ul {
 			list-style: none;
 			display: flex;
+			flex-direction: column;
+			padding: 8px;
+
+			@include breakpoint("medium") {
+				flex-direction: row;
+			}
+
 			li {
-				margin-left: 16px;
+				@include breakpoint("medium") {
+					margin-left: 16px;
+				}
+
 				&:first-child {
 					margin-left: 0;
 				}
 				a {
 					text-decoration: none;
-					color: #333;
 					&:hover {
 						color: #007bff;
 					}
@@ -35,10 +50,10 @@
 	}
 
 	&__auth {
+		padding: 8px;
 		a {
 			text-decoration: none;
 			margin-right: 8px;
-			color: #333;
 			&:hover {
 				color: #007bff;
 			}

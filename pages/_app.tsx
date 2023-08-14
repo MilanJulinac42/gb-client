@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<>
 			<main className={karla.className}>
 				{" "}
-				<Component {...pageProps} />;
+				<Component {...pageProps} />
 			</main>
 		</>
 	);

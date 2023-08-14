@@ -1,0 +1,92 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.navbar {
+	position: relative;
+	font-size: $large-font;
+	background: $white-color;
+	text-transform: uppercase;
+	color: $text-color;
+}
+
+.toggle {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+}
+
+.navContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid $border-color;
+
+	&:first-of-type div {
+		border-right: 1px solid $border-color;
+		margin-right: $small-padding;
+	}
+}
+
+.menuNav {
+	list-style: none;
+	background: $white-color;
+	position: absolute;
+	left: 0;
+	width: 0;
+	overflow: hidden;
+	width: 100%;
+	z-index: 9;
+	transform: translateX(-1000px);
+	transition: transform ease-in-out 0.2s;
+	height: 100vh;
+}
+
+.c1 {
+	color: $primary-color;
+}
+
+.c2 {
+	color: $secondary-coral-color;
+}
+
+.c3 {
+	color: $background-pale-green-color;
+}
+
+.menuNav.showMenu {
+	width: 100%;
+	transform: translateX(0px);
+}
+
+.menuNav li a {
+	display: block;
+	padding: $medium-padding;
+	border-bottom: 1px solid $border-color;
+}
+
+@include breakpoint("medium") {
+	.toggle {
+		display: none;
+	}
+
+	.menuNav {
+		position: static;
+		width: auto;
+		overflow: visible;
+		max-width: none;
+		transform: none;
+	}
+
+	.menuNav li {
+		display: inline-block;
+	}
+
+	.menuNav li a {
+		padding: 0.5rem 1rem;
+	}
+}
+
+body.showMenu {
+	overflow: hidden;
+}

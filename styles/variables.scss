@@ -7,6 +7,9 @@ $secondary-gray-color: #efefef;
 $text-color: #333333;
 $background-cream-color: #fffff0;
 $background-pale-green-color: #d4f2f2;
+$white-color: #ffffff;
+$black-color: #000000;
+$border-color: #b3a5a5;
 
 // Spacing
 $base-spacing-unit: 8px;
@@ -15,14 +18,17 @@ $medium-spacing: $base-spacing-unit;
 $large-spacing: $base-spacing-unit * 1.5;
 
 // Margins and Padding
-$default-margin: $base-spacing-unit;
-$default-padding: $base-spacing-unit;
+$small-margin: $base-spacing-unit;
+$small-padding: $base-spacing-unit;
 
-$small-margin: $base-spacing-unit / 2;
-$small-padding: $base-spacing-unit / 2;
+$medium-margin: $base-spacing-unit * 1.5;
+$medium-padding: $base-spacing-unit * 1.5;
 
-$large-margin: $base-spacing-unit * 1.5;
-$large-padding: $base-spacing-unit * 1.5;
+$large-margin: $base-spacing-unit * 2;
+$large-padding: $base-spacing-unit * 2;
+
+$extra-large-margin: $base-spacing-unit * 4;
+$extra-large-padding: $base-spacing-unit * 4;
 
 // Border Radius
 $default-border-radius: 4px;
@@ -32,3 +38,9 @@ $large-border-radius: 8px;
 $z-index-modal: 1000;
 $z-index-dropdown: 900;
 $z-index-sticky: 800;
+
+// Fonts
+$small-font: 16px;
+$medium-font: 24px;
+$large-font: 32px;
+$extra-large-font: 64px;

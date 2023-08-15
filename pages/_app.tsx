@@ -1,6 +1,8 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import { Karla, Zilla_Slab } from "next/font/google";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@fortawesome/fontawesome-free/js/all.min.js";
 
 export const karla = Karla({
 	subsets: ["latin"],

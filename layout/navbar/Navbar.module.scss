@@ -8,11 +8,14 @@
 	text-transform: uppercase;
 	color: $text-color;
 	font-weight: 700;
-	display: flex;
-	justify-content: space-around;
 
 	@include breakpoint("medium") {
 		padding: $extra-large-padding 0;
+		font-size: $medium-font;
+		justify-content: center;
+		justify-content: center;
+		align-items: center;
+		display: flex;
 	}
 }
 
@@ -20,12 +23,19 @@
 	cursor: pointer;
 	background: transparent;
 	border: none;
+	padding-right: $large-spacing;
+}
+
+.test {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .logoContainerSmall {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid $border-color;
 
@@ -36,6 +46,14 @@
 
 	@include breakpoint("medium") {
 		display: none;
+	}
+}
+
+.logoContainerLarge {
+	display: none;
+
+	@include breakpoint("medium") {
+		display: block;
 	}
 }
 
@@ -50,7 +68,10 @@
 	z-index: 9;
 	transform: translateX(-1000px);
 	transition: transform ease-in-out 0.5s;
-	height: 100vh;
+	height: 78vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
 	@include breakpoint("medium") {
 		position: static;
@@ -61,6 +82,11 @@
 		transform: initial;
 		transition: initial;
 		height: initial;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: $extra-large-padding;
+		max-width: 1050px;
 	}
 }
 
@@ -107,4 +133,27 @@
 
 body.showMenu {
 	overflow: hidden;
+}
+
+.authNav {
+	display: flex;
+	gap: $medium-spacing;
+}
+
+.small {
+	padding-right: $extra-large-padding;
+	display: flex;
+
+	@include breakpoint("medium") {
+		padding-right: 0;
+		display: none;
+	}
+}
+
+.large {
+	display: none;
+
+	@include breakpoint("medium") {
+		display: flex;
+	}
 }

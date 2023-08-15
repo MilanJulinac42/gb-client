@@ -7,7 +7,7 @@ const Logo: React.FC = () => {
 		<div>
 			<Image
 				className={styles.logo}
-				src="/logo_transparent.png"
+				src="/logo.png"
 				width={50}
 				height={50}
 				alt="Logo"

@@ -7,6 +7,13 @@
 	background: $white-color;
 	text-transform: uppercase;
 	color: $text-color;
+	font-weight: 700;
+	display: flex;
+	justify-content: space-around;
+
+	@include breakpoint("medium") {
+		padding: $extra-large-padding 0;
+	}
 }
 
 .toggle {
@@ -15,16 +22,20 @@
 	border: none;
 }
 
-.navContainer {
+.logoContainerSmall {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
 	border-bottom: 1px solid $border-color;
 
-	&:first-of-type div {
+	&:first-of-type span {
 		border-right: 1px solid $border-color;
 		margin-right: $small-padding;
+	}
+
+	@include breakpoint("medium") {
+		display: none;
 	}
 }
 
@@ -38,20 +49,19 @@
 	width: 100%;
 	z-index: 9;
 	transform: translateX(-1000px);
-	transition: transform ease-in-out 0.2s;
+	transition: transform ease-in-out 0.5s;
 	height: 100vh;
-}
 
-.c1 {
-	color: $primary-color;
-}
-
-.c2 {
-	color: $secondary-coral-color;
-}
-
-.c3 {
-	color: $background-pale-green-color;
+	@include breakpoint("medium") {
+		position: static;
+		left: initial;
+		width: initial;
+		overflow: initial;
+		z-index: initial;
+		transform: initial;
+		transition: initial;
+		height: initial;
+	}
 }
 
 .menuNav.showMenu {
@@ -59,10 +69,18 @@
 	transform: translateX(0px);
 }
 
+.c1 {
+	color: $primary-color;
+}
+
 .menuNav li a {
 	display: block;
 	padding: $medium-padding;
 	border-bottom: 1px solid $border-color;
+
+	@include breakpoint("medium") {
+		border-bottom: none;
+	}
 }
 
 @include breakpoint("medium") {

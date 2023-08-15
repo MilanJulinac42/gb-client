@@ -3,9 +3,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./Navbar.module.scss";
 import Logo from "../../components/logo/Logo";
+import { Squash as Hamburger } from "hamburger-react";
 
 export default function Navbar() {
 	const [navbar, setNavbar] = useState(false);
+	const [isOpen, setOpen] = useState(false);
 
 	useEffect(() => {
 		document.body.classList.toggle(styles.showMenu, navbar);
@@ -13,17 +15,17 @@ export default function Navbar() {
 
 	return (
 		<nav className={styles.navbar}>
-			<div className={styles.navContainer}>
+			<div className={styles.logoContainerSmall}>
+				<span>
+					<Logo></Logo>
+				</span>
+				<Hamburger toggled={isOpen} toggle={setOpen} />
+			</div>
+			<div className={styles.logoContainerLarge}>
 				<Logo></Logo>
-				<button
-					className={styles.toggle}
-					onClick={() => setNavbar(!navbar)}
-				>
-					{navbar ? "Close menu" : "Open menu"}
-				</button>
 			</div>
 			<ul
-				className={`${styles.menuNav} ${navbar ? styles.showMenu : ""}`}
+				className={`${styles.menuNav} ${isOpen ? styles.showMenu : ""}`}
 			>
 				<li className={styles.c1}>
 					<Link href="/">Home</Link>

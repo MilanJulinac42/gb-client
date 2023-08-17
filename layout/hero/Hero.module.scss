@@ -12,8 +12,12 @@
 }
 
 .heading {
-	font-size: $extra-large-font;
+	font-size: $large-font;
 	color: $secondary-coral-color;
+
+	@include breakpoint("medium") {
+		font-size: $extra-large-font;
+	}
 }
 
 .imageWrapper {

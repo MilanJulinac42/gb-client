@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.imageContainer {
+	width: 100%;
+	flex: 1;
+	width: calc((100% - 2 * $large-spacing) / 3);
+
+	> div {
+		position: unset !important;
+	}
+
+	.image {
+		position: relative !important;
+	}
+}

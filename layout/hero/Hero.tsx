@@ -7,9 +7,9 @@ const Hero: React.FC = () => {
 		<div className={styles.wrapper}>
 			<h1 className={styles.heading}>Cinimo trenutke posebnim</h1>
 			<div className={styles.imageWrapper}>
-				<HeroImage src="/gb1.jpg"></HeroImage>
-				<HeroImage src="/gb2.jpeg"></HeroImage>
-				<HeroImage src="/gb3.jpeg"></HeroImage>
+				<HeroImage src="/gb1.jpg" />
+				<HeroImage src="/gb2.jpeg" />
+				<HeroImage src="/gb3.jpeg" />
 			</div>
 		</div>
 	);

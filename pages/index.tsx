@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Container from "../components/container/Container";
 import Navbar from "../layout/navbar/Navbar";
+import Hero from "../layout/hero/Hero";
 
 const Home: NextPage = () => {
 	return (
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
 			<Navbar></Navbar>
 			<main>
 				<Container>
-					<p>random</p>
+					<Hero></Hero>
 				</Container>
 			</main>
 		</div>

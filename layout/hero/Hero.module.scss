@@ -1,0 +1,21 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.wrapper {
+	padding: $extra-large-padding 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: $large-spacing;
+}
+
+.heading {
+	font-size: $extra-large-font;
+	color: $secondary-coral-color;
+}
+
+.imageWrapper {
+	display: flex;
+	gap: $medium-spacing;
+}

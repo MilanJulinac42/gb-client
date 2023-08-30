@@ -27,3 +27,12 @@
 	width: 100%;
 	padding: 0 $large-padding;
 }
+
+.cta {
+	padding: $small-padding;
+	font-size: $medium-font;
+	border: 1px solid $secondary-coral-color;
+	background-color: transparent;
+	color: $white-color;
+	cursor: pointer;
+}

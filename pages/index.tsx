@@ -19,8 +19,11 @@ const Home: NextPage = () => {
 
 			<Navbar></Navbar>
 			<main>
-				<Container>
+				<Container color="#364f6b">
 					<Hero></Hero>
+				</Container>
+				<Container color="#fff2cc">
+					
 				</Container>
 			</main>
 		</div>

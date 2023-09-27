@@ -3,6 +3,7 @@ import Head from "next/head";
 import Container from "../components/container/Container";
 import Navbar from "../layout/navbar/Navbar";
 import Hero from "../layout/hero/Hero";
+import LandingPageGallery from "../layout/landingPageGallery/LandingPageGallery";
 
 const Home: NextPage = () => {
 	return (
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
 					<Hero></Hero>
 				</Container>
 				<Container color="#fff2cc">
-					
+					<LandingPageGallery />
 				</Container>
 			</main>
 		</div>

@@ -2,37 +2,84 @@
 @import "../../styles/variables.scss";
 
 .wrapper {
-	padding: $extra-large-padding 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: $large-spacing;
-	width: 100%;
+  padding: $extra-large-padding 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $large-spacing;
+  width: 100%;
 }
 
 .heading {
-	font-size: $large-font;
-	color: $secondary-coral-color;
+  font-size: $large-font;
+  color: $secondary-coral-color;
 
-	@include breakpoint("medium") {
-		font-size: $extra-large-font;
-	}
+  @include breakpoint("medium") {
+    font-size: $extra-large-font;
+  }
 }
 
 .imageWrapper {
-	display: flex;
-	gap: $medium-spacing;
-	justify-content: space-between;
-	width: 100%;
-	padding: 0 $large-padding;
+  display: flex;
+  gap: $medium-spacing;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 $large-padding;
 }
 
 .cta {
-	padding: $small-padding;
-	font-size: $medium-font;
-	border: 1px solid $secondary-coral-color;
-	background-color: transparent;
-	color: $white-color;
-	cursor: pointer;
+  padding: $small-padding;
+  font-size: $medium-font;
+  border: 1px solid $secondary-coral-color;
+  background-color: transparent;
+  color: $white-color;
+  cursor: pointer;
+}
+
+.wrapperT {
+  background-image: url("/gb1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+.wrapperT::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: 0;
+}
+
+.contentWrapper {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.h1T {
+  font-size: $large-font;
+  color: $secondary-coral-color;
+}
+
+.ctaT {
+  padding: $small-padding;
+  font-size: $medium-font;
+  border: 1px solid $secondary-coral-color;
+  background-color: transparent;
+  color: $white-color;
+  cursor: pointer;
 }

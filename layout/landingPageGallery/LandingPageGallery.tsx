@@ -11,12 +11,16 @@ const LandingPageGallery: React.FC = () => {
     { name: "Product 5", price: 64.99, imageUrl: "/gb1.jpg" },
   ];
   return (
-    <div
-      style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
-    >
-      {products.map((product, index) => (
-        <Card key={index} {...product} />
-      ))}
+    <div className={styles.wrapper}>
+      <h1>Pogledajte neke od nasih proizvoda</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi tempora fuga corrupti ullam odio eos dolorem ducimus at eligendi! Earum consectetur corrupti doloribus repudiandae, ex quae eos sit? Delectus minima facilis harum repellat nulla dolores illo reiciendis nihil cumque, amet laudantium et unde beatae enim excepturi ut iusto voluptates placeat.</p>
+      <div
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
+        {products.map((product, index) => (
+          <Card key={index} {...product} />
+        ))}
+      </div>
     </div>
   );
 };

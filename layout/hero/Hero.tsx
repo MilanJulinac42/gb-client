@@ -15,6 +15,7 @@ const Hero: React.FC = () => {
     // </div>
     <div className={styles.wrapperT}>
       <div className={styles.contentWrapper}>
+		<p>regalo</p>
         <h1 className={styles.h1T}>Cinimo trenutke posebnim</h1>
         <button className={styles.ctaT}>SHOP NOW</button>
         <div className={styles.scroll}></div>

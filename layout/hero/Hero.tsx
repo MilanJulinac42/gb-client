@@ -1,13 +1,6 @@
 import React from "react";
 import styles from "./Hero.module.scss";
 import HeroImage from "../../components/heroImage/HeroImage";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleDoubleDown,
-  faAngleDown,
-  faChevronDown,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
 
 const Hero: React.FC = () => {
   return (

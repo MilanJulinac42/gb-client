@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "./Card.module.scss";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,18 +14,18 @@ interface ProductCardProps {
 const Card: React.FC<ProductCardProps> = ({ name, price, imageUrl }) => {
   return (
     <div className={styles.container}>
+      <Image src={imageUrl} alt="random" width={300} height={300}/>
       <div className={styles.overlay}>
         <div className={styles.items}></div>
         <div className={classNames(styles.items, styles.head)}>
-          <p>Flower Embroidery Hoop Art</p>
+          <p>{name}</p>
           <hr />
         </div>
         <div className={classNames(styles.items, styles.price)}>
-          <p className={styles.old}>$699</p>
-          <p className={styles.new}>$345</p>
+          <p className={styles.new}>{price}$</p>
         </div>
         <div className={classNames(styles.items, styles.cart)}>
-        <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
           <span>ADD TO CART</span>
         </div>
       </div>

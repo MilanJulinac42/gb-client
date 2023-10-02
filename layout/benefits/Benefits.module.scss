@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 32px;
+    width: 80%;
+    height: 500px;
+}
+
+.sectionHeading {
+    padding-bottom: 100px;
+}
+
+.icons {
+    display: flex;
+    position: relative;
+    gap: 32px;
+}
+
+.icon {
+    font-size: 20rem;
+    color: #f08e8e31;
+    position: absolute;
+    transform: translateY(-100px);
+}
+
+.spanBorder {
+    width: 1px;
+    height: 300px;
+    background-color: #0099ff;
+    margin-bottom: 2em;
+    padding-left: 1.5px;
+    padding-right: 1.5px;
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    h3 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}

@@ -1,25 +1,19 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
-import { Karla, Zilla_Slab } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@fortawesome/fontawesome-free/js/all.min.js";
 
-export const karla = Karla({
+export const roboto = Roboto({
 	subsets: ["latin"],
 	weight: ["400", "700"],
-	variable: "--font-karla",
-});
-
-export const zilla = Zilla_Slab({
-	subsets: ["latin"],
-	weight: ["400", "700"],
-	variable: "--font-zilla",
-});
+	variable: "--font-roboto",
+})
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
-			<main className={karla.className}>
+			<main className={roboto.className}>
 				{" "}
 				<Component {...pageProps} />
 			</main>

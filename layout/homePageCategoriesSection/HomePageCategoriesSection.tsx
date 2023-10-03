@@ -12,7 +12,6 @@ const HomePageCategoriesSection: React.FC = () => {
   ];
   return (
     <div className={styles.wrapper}>
-      <h1>Shop by category</h1>
       <p>Check some of our categories</p>
       <div className={styles.gallery}>
         {products.map((product, index) => (

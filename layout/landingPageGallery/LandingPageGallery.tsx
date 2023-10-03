@@ -12,7 +12,6 @@ const LandingPageGallery: React.FC = () => {
   ];
   return (
     <div className={styles.wrapper}>
-      <h1>Pogledajte neke od nasih proizvoda</h1>
       <p className={styles.text}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi tempora fuga corrupti ullam odio eos dolorem ducimus at eligendi! Earum consectetur corrupti doloribus repudiandae, ex quae eos sit? Delectus minima facilis harum repellat nulla dolores illo reiciendis nihil cumque, amet laudantium et unde beatae enim excepturi ut iusto voluptates placeat.</p>
       <div
         className={styles.gallery}

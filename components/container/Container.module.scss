@@ -2,12 +2,33 @@
 @import "../../styles/variables.scss";
 
 .pageContainer {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $logo-color;
 }
 
 .contentContainer {
-	width: 100%;
+  width: 100%;
+}
+
+.heading {
+	padding-top: $extra-large-padding;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+
+  span {
+    height: 3px;
+	width: 200px;
+	display: block;
+	background-color: $logo-color;
+  }
+
+  h3 {
+    font-size: $large-font;
+  }
 }

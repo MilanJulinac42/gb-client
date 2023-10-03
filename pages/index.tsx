@@ -8,35 +8,35 @@ import Benefits from "../layout/benefits/Benefits";
 import HomePageCategoriesSection from "../layout/homePageCategoriesSection/HomePageCategoriesSection";
 
 const Home: NextPage = () => {
-	return (
-		<div>
-			<Head>
-				<title>Regalo</title>
-				<meta
-					name="description"
-					content="Your description about the gift basket e-commerce app"
-				/>
+  return (
+    <div>
+      <Head>
+        <title>Regalo</title>
+        <meta
+          name="description"
+          content="Your description about the gift basket e-commerce app"
+        />
 
-				<link rel="icon" href="/favicon.png" />
-			</Head>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
 
-			<Navbar></Navbar>
-			<main>
-				<Container color="#364f6b">
-					<Hero></Hero>
-				</Container>
-				<Container color="#fff2cc">
-					<LandingPageGallery />
-				</Container>
-				<Container color="#b2d8d8">
-					<Benefits></Benefits>
-				</Container>
-				<Container color="#fff2cc">
-					<HomePageCategoriesSection></HomePageCategoriesSection>
-				</Container>
-			</main>
-		</div>
-	);
+      <Navbar></Navbar>
+      <main>
+        <Container color="#364f6b">
+          <Hero></Hero>
+        </Container>
+        <Container color="#fff2cc" heading="Pogledajte neke od nasih proizvoda">
+          <LandingPageGallery />
+        </Container>
+        <Container color="#b2d8d8" heading="Benefits and stuff and other stuff">
+          <Benefits></Benefits>
+        </Container>
+        <Container color="#fff2cc" heading="Shop by category">
+          <HomePageCategoriesSection></HomePageCategoriesSection>
+        </Container>
+      </main>
+    </div>
+  );
 };
 
 export default Home;

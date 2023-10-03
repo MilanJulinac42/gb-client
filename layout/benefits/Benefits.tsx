@@ -8,9 +8,6 @@ import { faFaceGrinHearts } from "@fortawesome/free-solid-svg-icons";
 const Benefits: React.FC = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.sectionHeading}>
-        Benefits and stuff and other stuff
-      </h1>
       <div className={styles.icons}>
         <div className={styles.iconContainer}>
           <FontAwesomeIcon

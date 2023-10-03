@@ -17,7 +17,7 @@ const Card: React.FC<ProductCardProps> = ({ name, price, imageUrl }) => {
         </div>
 
         <div className={styles.contentBx}>
-          <h2>Nike Shoes</h2>
+          <h2>{name}</h2>
 
           <div className={styles.size}>
             <h3>Price :</h3>

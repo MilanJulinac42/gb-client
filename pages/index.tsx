@@ -6,6 +6,7 @@ import Hero from "../layout/hero/Hero";
 import LandingPageGallery from "../layout/landingPageGallery/LandingPageGallery";
 import Benefits from "../layout/benefits/Benefits";
 import HomePageCategoriesSection from "../layout/homePageCategoriesSection/HomePageCategoriesSection";
+import Shipping from "../layout/shipping/Shipping";
 
 const Home: NextPage = () => {
   return (
@@ -33,6 +34,9 @@ const Home: NextPage = () => {
         </Container>
         <Container color="#fff2cc" heading="Shop by category">
           <HomePageCategoriesSection></HomePageCategoriesSection>
+        </Container>
+        <Container color="#b2d8d8" heading="Shipping & Payment">
+          <Shipping></Shipping>
         </Container>
       </main>
     </div>

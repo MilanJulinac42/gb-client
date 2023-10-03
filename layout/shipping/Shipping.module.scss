@@ -1,0 +1,41 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    padding-bottom: $extra-large-padding;
+
+    ul {
+        margin-left: 20px;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: $small-padding;
+        }
+      }
+
+      p {
+        color: $logo-color;
+        line-height: 26px;
+      }
+
+      h3 {
+        padding-bottom: $small-padding;
+      }
+  }
+  
+  .content {
+    display: flex;
+    gap: 100px;
+  }
+  
+  .shipping,
+  .payment {
+    flex: 1;
+  }
+
+  
+ 

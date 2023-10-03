@@ -7,6 +7,7 @@ import LandingPageGallery from "../layout/landingPageGallery/LandingPageGallery"
 import Benefits from "../layout/benefits/Benefits";
 import HomePageCategoriesSection from "../layout/homePageCategoriesSection/HomePageCategoriesSection";
 import Shipping from "../layout/shipping/Shipping";
+import Footer from "../layout/footer/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -39,6 +40,7 @@ const Home: NextPage = () => {
           <Shipping></Shipping>
         </Container>
       </main>
+      <Footer></Footer>
     </div>
   );
 };

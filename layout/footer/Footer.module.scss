@@ -1,0 +1,42 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.footer {
+  border-top: 1px solid $secondary-coral-color;
+  background-color: $logo-color;
+  color: white;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: $extra-large-padding;
+  padding-bottom: $extra-large-padding;
+  text-align: center;
+}
+
+.social,
+.links,
+.contact {
+  flex: 1;
+
+  p {
+    color: $secondary-yellow-color;
+    padding-bottom: $small-padding;
+  }
+
+  h4 {
+    font-size: $medium-font;
+    padding-bottom: $small-padding;
+    color: $secondary-coral-color;
+  }
+}
+
+.copyright {
+    border-top: 1px solid $secondary-yellow-color;
+    text-align: center;
+    background-color: $black-color;
+    padding: $small-padding;
+}

@@ -15,20 +15,34 @@
 }
 
 .heading {
-	padding-top: $extra-large-padding;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
+  padding-top: $extra-large-padding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+
+  @include breakpoint("xlarge") {
+    gap: 100px;
+  }
 
   span {
-    height: 3px;
-	width: 200px;
-	display: block;
-	background-color: $logo-color;
+    height: 10px;
+    width: 50px;
+    display: block;
+    background-color: $logo-color;
+
+    @include breakpoint("large") {
+      width: 200px;
+    }
   }
 
   h3 {
     font-size: $large-font;
+    text-align: center;
+    width: 70%;
+
+    @include breakpoint("large") {
+      width: auto;
+    }
   }
 }

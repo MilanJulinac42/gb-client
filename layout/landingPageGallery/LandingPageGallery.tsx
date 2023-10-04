@@ -24,7 +24,7 @@ const LandingPageGallery: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "60px",
+    centerPadding: "40px",
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,

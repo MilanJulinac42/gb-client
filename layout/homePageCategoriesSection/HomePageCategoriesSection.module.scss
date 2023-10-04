@@ -2,22 +2,29 @@
 @import "../../styles/variables.scss";
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    gap: 16px;
-    margin-bottom: 32px;
-    margin-top: 30px;
-    color: $logo-color;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: auto;
+  gap: 16px;
+  margin-bottom: 32px;
+  margin-top: 30px;
+  color: $logo-color;
+
+  .text {
+    text-align: center;
+  }
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 32px;
-    padding-bottom: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.sliderWrapper {
+  padding-top: $extra-large-padding;
+  padding-bottom: $extra-large-padding;
 }

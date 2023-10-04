@@ -19,22 +19,6 @@ const Footer: React.FC = () => {
           <p>Address: Kralja Petra I, Backa Palanka, Srbija</p>
         </div>
 
-        <div className={styles.social}>
-          <h4>Folow us</h4>
-          <p>
-            LinkedIn <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
-          </p>
-          <p>
-            Instagram <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
-          </p>
-          <p>
-            Facebook <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
-          </p>
-          <p>
-            TikTok <FontAwesomeIcon icon={faTiktok}></FontAwesomeIcon>
-          </p>
-        </div>
-
         <div className={styles.links}>
           <h4>Quick Links</h4>
           <p>Shop</p>
@@ -43,6 +27,29 @@ const Footer: React.FC = () => {
           <p>Contact us</p>
           <p>Blog</p>
         </div>
+      </div>
+      <div className={styles.social}>
+        <h4>Folow us:</h4>
+
+        <FontAwesomeIcon
+          className={styles.icon}
+          icon={faLinkedin}
+        ></FontAwesomeIcon>
+
+        <FontAwesomeIcon
+          className={styles.icon}
+          icon={faInstagram}
+        ></FontAwesomeIcon>
+
+        <FontAwesomeIcon
+          className={styles.icon}
+          icon={faFacebook}
+        ></FontAwesomeIcon>
+
+        <FontAwesomeIcon
+          className={styles.icon}
+          icon={faTiktok}
+        ></FontAwesomeIcon>
       </div>
       <div className={styles.copyright}>
         <p>&copy; 2023 Regalo. All Rights Reserved.</p>

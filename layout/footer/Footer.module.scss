@@ -8,16 +8,19 @@
 }
 
 .wrapper {
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
   padding-top: $extra-large-padding;
   padding-bottom: $extra-large-padding;
   text-align: center;
+
+  @include breakpoint("medium") {
+    width: 80%;
+  }
 }
 
-.social,
 .links,
 .contact {
   flex: 1;
@@ -25,12 +28,17 @@
   p {
     color: $secondary-yellow-color;
     padding-bottom: $small-padding;
+    font-size: $small-font;
   }
 
   h4 {
-    font-size: $medium-font;
+    font-size: $small-font;
     padding-bottom: $small-padding;
     color: $secondary-coral-color;
+
+    @include breakpoint("medium") {
+      font-size: $medium-font;
+    }
   }
 }
 
@@ -39,4 +47,21 @@
     text-align: center;
     background-color: $black-color;
     padding: $small-padding;
+}
+
+.social {
+  display: flex;
+  gap: $medium-padding;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: $small-padding;
+
+  h4 {
+    font-size: $medium-font;
+  }
+
+  .icon {
+    color: $secondary-yellow-color;
+    font-size: $medium-font;
+  }
 }

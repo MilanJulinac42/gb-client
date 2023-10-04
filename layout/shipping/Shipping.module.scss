@@ -29,7 +29,14 @@
   
   .content {
     display: flex;
-    gap: 100px;
+    flex-direction: column;
+    gap: $extra-large-padding;
+
+    @include breakpoint("large") {
+      display: flex;
+      flex-direction: row;
+      gap: 100px;
+    }
   }
   
   .shipping,

@@ -18,6 +18,7 @@
 
   @include breakpoint("medium") {
     width: 80%;
+    flex-direction: column;
   }
 }
 
@@ -25,7 +26,8 @@
 .contact {
   flex: 1;
 
-  p {
+  p,
+  a {
     color: $secondary-yellow-color;
     padding-bottom: $small-padding;
     font-size: $small-font;
@@ -43,10 +45,10 @@
 }
 
 .copyright {
-    border-top: 1px solid $secondary-yellow-color;
-    text-align: center;
-    background-color: $black-color;
-    padding: $small-padding;
+  border-top: 1px solid $secondary-yellow-color;
+  text-align: center;
+  background-color: $black-color;
+  padding: $small-padding;
 }
 
 .social {
@@ -64,4 +66,9 @@
     color: $secondary-yellow-color;
     font-size: $medium-font;
   }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
 }

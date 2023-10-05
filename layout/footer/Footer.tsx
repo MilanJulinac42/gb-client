@@ -7,6 +7,7 @@ import {
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -21,35 +22,43 @@ const Footer: React.FC = () => {
 
         <div className={styles.links}>
           <h4>Quick Links</h4>
-          <p>Shop</p>
-          <p>Home</p>
-          <p>About us</p>
-          <p>Contact us</p>
-          <p>Blog</p>
+          <Link href="/shop">Shop</Link>
+          <Link href="/">Home</Link>
+          <Link href="/about">About us</Link>
+          <Link href="/contact">Contact us</Link>
+          <Link href="/blog">Blog</Link>
         </div>
       </div>
       <div className={styles.social}>
-        <h4>Folow us:</h4>
-
-        <FontAwesomeIcon
-          className={styles.icon}
-          icon={faLinkedin}
-        ></FontAwesomeIcon>
-
-        <FontAwesomeIcon
-          className={styles.icon}
-          icon={faInstagram}
-        ></FontAwesomeIcon>
-
-        <FontAwesomeIcon
-          className={styles.icon}
-          icon={faFacebook}
-        ></FontAwesomeIcon>
-
-        <FontAwesomeIcon
-          className={styles.icon}
-          icon={faTiktok}
-        ></FontAwesomeIcon>
+        <h4>Follow us:</h4>
+        <Link
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon className={styles.icon} icon={faLinkedin} />
+        </Link>
+        <Link
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon className={styles.icon} icon={faInstagram} />
+        </Link>
+        <Link
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon className={styles.icon} icon={faFacebook} />
+        </Link>
+        <Link
+          href="https://www.tiktok.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon className={styles.icon} icon={faTiktok} />
+        </Link>
       </div>
       <div className={styles.copyright}>
         <p>&copy; 2023 Regalo. All Rights Reserved.</p>

@@ -2,7 +2,9 @@
 @import "../../styles/mixins.scss";
 
 .navbar {
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 8000;
 	font-size: $large-font;
 	background-color: $background-pale-green-color;
 	text-transform: uppercase;
@@ -152,3 +154,10 @@ body.showMenu {
 		display: flex;
 	}
 }
+
+.navbar.scrolled {
+	height: 50px;
+	transform: scale(0.9);
+	transition: all 0.3s ease;
+  }
+  

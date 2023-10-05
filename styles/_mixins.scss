@@ -1,92 +1,49 @@
 @mixin font-size($size) {
-	font-size: $size;
+  font-size: $size;
 
-	@include breakpoint(medium) {
-		font-size: $size * 1.2;
-	}
+  @include breakpoint(medium) {
+    font-size: $size * 1.2;
+  }
 
-	@include breakpoint(large) {
-		font-size: $size * 1.5;
-	}
+  @include breakpoint(large) {
+    font-size: $size * 1.5;
+  }
 }
 
 @mixin aspect-ratio($width, $height) {
-	position: relative;
-	width: 100%;
+  position: relative;
+  width: 100%;
 
-	&::before {
-		content: "";
-		display: block;
-		padding-top: percentage($height / $width);
-	}
+  &::before {
+    content: "";
+    display: block;
+    padding-top: percentage($height / $width);
+  }
 
-	> * {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 $breakpoints: (
-	small: 576px,
-	medium: 768px,
-	large: 992px,
-	xlarge: 1200px,
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1200px,
 );
 
 @mixin breakpoint($point) {
-	@media only screen and (min-width: map-get($breakpoints, $point)) {
-		@content;
-	}
+  @media only screen and (min-width: map-get($breakpoints, $point)) {
+    @content;
+  }
 }
 
 @mixin media-query($size) {
-	@media only screen and ($size) {
-		@content;
-	}
+  @media only screen and ($size) {
+    @content;
+  }
 }
-
-// FONT ALTERNATIVE 1
-
-// @function pxToRem($pxSize) {
-// 	@return $pxSize / 16 + rem;
-// }
-
-// @mixin fontSize($pxSize) {
-// 	font-size: $pxSize + px; // Fallback for browsers that do not support REM units
-// 	font-size: pxToRem($pxSize); // REM size
-// }
-
-// USAGE
-//  .heading {
-//    @include fontSize(24);
-//  }
-
-// FONT ALTERNATIVE 2
-
-//  @mixin fontSize($fontSizes) {
-//    @each $breakpoint, $fontSize in $fontSizes {
-//      @if $breakpoint == null {
-//        font-size: pxToRem($fontSize);
-//      } @else {
-//        @media screen and (min-width: $breakpoint) {
-//          font-size: pxToRem($fontSize);
-//        }
-//      }
-//    }
-//  }
-
-// USAGE
-
-//  $h1-font-sizes: (
-//    null  : 28,
-//    480px : 31,
-//    640px : 33,
-//    1024px: 36
-//  );
-
-//  h1 {
-//    @include fontSize($h1-font-sizes);
-//  }

@@ -10,39 +10,10 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   const [isOpen, setOpen] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const debounce = (func: () => void, delay: number) => {
-    let debounceTimer: NodeJS.Timeout;
-    return function () {
-      const context = this;
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => func.apply(context), delay);
-    };
-  };
-
-  useEffect(() => {
-    document.body.classList.toggle(styles.showMenu, navbar);
-  }, [navbar]);
-
-  useEffect(() => {
-    const handleScroll = debounce(() => {
-      const position = window.scrollY;
-      setScrollPosition(position);
-    }, 100);
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <nav
-      className={`${styles.navbar} ${
-        scrollPosition > 300 ? styles.scrolled : ""
-      }`}
+      className={styles.navbar}
     >
       <div className={styles.logoContainerSmall}>
         <div className={styles.test}>

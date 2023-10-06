@@ -9,8 +9,9 @@ const Logo: React.FC = () => {
 				className={styles.logo}
 				src="/logo.png"
 				width={150}
-				height={150}
+				height={50}
 				alt="Logo"
+				objectFit="cover"
 			/>
 		</div>
 	);

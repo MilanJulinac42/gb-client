@@ -2,155 +2,156 @@
 @import "../../styles/mixins.scss";
 
 .navbar {
-	position: sticky;
-	top: 0;
-	z-index: 8000;
-	font-size: $large-font;
-	background-color: $background-pale-green-color;
-	text-transform: uppercase;
-	color: $text-color;
-	font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 8000;
+  font-size: $large-font;
+  background-color: $background-pale-green-color;
+  text-transform: uppercase;
+  color: $text-color;
+  font-weight: 700;
 
-	@include breakpoint("medium") {
-		padding: $small-padding 0;
-		font-size: $medium-font;
-		justify-content: center;
-		justify-content: center;
-		align-items: center;
-		display: flex;
-	}
+  @include breakpoint("medium") {
+    padding: $extra-large-padding 0;
+    font-size: $medium-font;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
 }
 
 .toggle {
-	cursor: pointer;
-	background: transparent;
-	border: none;
-	padding-right: $large-spacing;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding-right: $large-spacing;
 }
 
 .test {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logoContainerSmall {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 1px solid $border-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
 
-	&:first-of-type span {
-		border-right: 1px solid $border-color;
-		margin-right: $small-padding;
-	}
+  &:first-of-type span {
+    border-right: 1px solid $border-color;
+    margin-right: $small-padding;
+  }
 
-	@include breakpoint("medium") {
-		display: none;
-	}
+  @include breakpoint("medium") {
+    display: none;
+  }
 }
 
 .logoContainerLarge {
-	display: none;
+  display: none;
 
-	@include breakpoint("medium") {
-		display: block;
-	}
+  @include breakpoint("medium") {
+    display: block;
+  }
 }
 
 .menuNav {
-	list-style: none;
-	position: absolute;
-	left: 0;
-	width: 0;
-	overflow: hidden;
-	width: 100%;
-	z-index: 9;
-	transform: translateX(-1000px);
-	transition: transform ease-in-out 0.5s;
-	height: 78vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 9;
+  transform: translateX(-1000px);
+  transition: transform ease-in-out 0.5s;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $background-pale-green-color;
 
-	@include breakpoint("medium") {
-		position: static;
-		left: initial;
-		width: initial;
-		overflow: initial;
-		z-index: initial;
-		transform: initial;
-		transition: initial;
-		height: initial;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		gap: $extra-large-padding;
-		max-width: 1050px;
-	}
+  @include breakpoint("medium") {
+    position: static;
+    left: initial;
+    width: initial;
+    overflow: initial;
+    z-index: initial;
+    transform: initial;
+    transition: initial;
+    height: initial;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: $extra-large-padding;
+    max-width: 1050px;
+  }
 }
 
 .menuNav.showMenu {
-	width: 100%;
-	transform: translateX(0px);
+  width: 100%;
+  transform: translateX(0px);
 }
 
 .menuNav li a {
-	display: block;
-	padding: $medium-padding;
-	border-bottom: 1px solid $border-color;
+  display: block;
+  padding: $medium-padding;
+  border-bottom: 1px solid $border-color;
 
-	@include breakpoint("medium") {
-		border-bottom: none;
-	}
+  @include breakpoint("medium") {
+    border-bottom: none;
+  }
 }
 
 @include breakpoint("medium") {
-	.toggle {
-		display: none;
-	}
+  .toggle {
+    display: none;
+  }
 
-	.menuNav {
-		position: static;
-		width: auto;
-		overflow: visible;
-		max-width: none;
-		transform: none;
-	}
+  .menuNav {
+    position: static;
+    width: auto;
+    overflow: visible;
+    max-width: none;
+    transform: none;
+  }
 
-	.menuNav li {
-		display: inline-block;
-	}
+  .menuNav li {
+    display: inline-block;
+  }
 
-	.menuNav li a {
-		padding: 0.5rem 1rem;
-	}
+  .menuNav li a {
+    padding: 0.5rem 1rem;
+  }
 }
 
 body.showMenu {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .authNav {
-	display: flex;
-	gap: $medium-spacing;
+  display: flex;
+  gap: $medium-spacing;
 }
 
 .small {
-	padding-right: $extra-large-padding;
-	display: flex;
+  padding-right: $extra-large-padding;
+  display: flex;
 
-	@include breakpoint("medium") {
-		padding-right: 0;
-		display: none;
-	}
+  @include breakpoint("medium") {
+    padding-right: 0;
+    display: none;
+  }
 }
 
 .large {
-	display: none;
+  display: none;
 
-	@include breakpoint("medium") {
-		display: flex;
-	}
+  @include breakpoint("medium") {
+    display: flex;
+  }
 }

@@ -41,7 +41,7 @@
   background-image: url("/gb1.jpg");
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  height: 70vh;
   margin: 0;
   display: flex;
   align-items: center;
@@ -78,6 +78,7 @@
 .h1T {
   font-size: $large-font;
   color: $secondary-coral-color;
+  text-align: center;
 }
 
 .ctaT {

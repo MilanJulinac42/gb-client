@@ -36,7 +36,7 @@ export default function Navbar() {
             <Link href="/">Home</Link>
           </li>
           <li className={styles.c2}>
-            <Link href="/blogs">Blogs</Link>
+            <Link href="/baskets">Baskets</Link>
           </li>
           <li className={styles.c3}>
             <Link href="/about">About Us</Link>

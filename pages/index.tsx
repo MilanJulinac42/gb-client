@@ -11,11 +11,23 @@ import Footer from "../layout/footer/Footer";
 import axios from "axios";
 
 interface HomeProps {
-  settingsData: any;
+  settingsData: Settings;
 }
 
-const Home: NextPage<HomeProps> = ({ settingsData }) => {
+interface Settings {
+  heroTitle: string;
+  giftBasketsGallery: Basket[];
+}
 
+export interface Basket  {
+  _id: string;
+  imageUrl: string;
+  name: string;
+  type: string;
+  price: number;
+};
+
+const Home: NextPage<HomeProps> = ({ settingsData }) => {
   return (
     <div>
       <Head>
@@ -31,10 +43,10 @@ const Home: NextPage<HomeProps> = ({ settingsData }) => {
       <Navbar></Navbar>
       <main>
         <Container color="#364f6b">
-          <Hero heroTitle={settingsData.settings.heroTitle}></Hero>
+          <Hero heroTitle={settingsData.heroTitle}></Hero>
         </Container>
         <Container color="#fff2cc" heading="Pogledajte neke od nasih proizvoda">
-          <LandingPageGallery giftBasketsGallery={settingsData.settings.giftBasketsGallery} />
+          <LandingPageGallery giftBasketsGallery={settingsData.giftBasketsGallery} />
         </Container>
         <Container color="#b2d8d8" heading="Benefits and stuff and other stuff">
           <Benefits></Benefits>
@@ -54,7 +66,7 @@ const Home: NextPage<HomeProps> = ({ settingsData }) => {
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   try {
     const response = await axios.get('http://localhost:9090/settings/find');
-    const settingsData = response.data;
+    const settingsData = response.data.settings;
 
     return {
       props: {

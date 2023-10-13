@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./Hero.module.scss";
-import HeroImage from "../../components/heroImage/HeroImage";
 
-const Hero: React.FC<{ heroTitle: any }> = ({ heroTitle }) => {
+const Hero: React.FC<{ heroTitle: string }> = ({ heroTitle }) => {
   return (
     <div className={styles.wrapperT}>
       <div className={styles.contentWrapper}>

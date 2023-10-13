@@ -5,8 +5,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useMediaQuery } from "react-responsive";
+import { Basket } from "../../pages/index"
 
-const LandingPageGallery: React.FC<{ giftBasketsGallery: any }> = ({
+const LandingPageGallery: React.FC<{ giftBasketsGallery: Basket[] }> = ({
   giftBasketsGallery,
 }) => {
   const products = giftBasketsGallery;

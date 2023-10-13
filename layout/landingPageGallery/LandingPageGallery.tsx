@@ -10,10 +10,6 @@ const LandingPageGallery: React.FC<{ giftBasketsGallery: any }> = ({
   giftBasketsGallery,
 }) => {
   const products = giftBasketsGallery;
-  useEffect(() => {
-    console.log(products)
-  }, [])
-
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
 
   const settings = {

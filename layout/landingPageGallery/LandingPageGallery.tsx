@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./LandingPageGallery.module.scss";
 import Card from "../../components/card/Card";
 import Slider from "react-slick";
@@ -6,14 +6,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useMediaQuery } from "react-responsive";
 
-const LandingPageGallery: React.FC = () => {
-  const products = [
-    { name: "Product 1", price: 19.99, imageUrl: "/gb1.jpg" },
-    { name: "Product 2", price: 24.99, imageUrl: "/gb1.jpg" },
-    { name: "Product 3", price: 34.99, imageUrl: "/gb1.jpg" },
-    { name: "Product 4", price: 54.99, imageUrl: "/gb1.jpg" },
-    { name: "Product 5", price: 64.99, imageUrl: "/gb1.jpg" },
-  ];
+const LandingPageGallery: React.FC<{ giftBasketsGallery: any }> = ({
+  giftBasketsGallery,
+}) => {
+  const products = giftBasketsGallery;
+  useEffect(() => {
+    console.log(products)
+  }, [])
 
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
 
@@ -45,7 +44,7 @@ const LandingPageGallery: React.FC = () => {
     <div className={styles.sliderWrapper}>
       {isSmallScreen ? (
         <Slider {...settings}>
-          {products.map((product, index) => (
+          {products.map((product: any, index: any) => (
             <div key={index}>
               <Card {...product} />
             </div>
@@ -62,7 +61,7 @@ const LandingPageGallery: React.FC = () => {
             voluptates placeat.
           </p>
           <div className={styles.gallery}>
-            {products.map((product, index) => (
+            {products.map((product: any, index: any) => (
               <Card key={index} {...product} />
             ))}
           </div>

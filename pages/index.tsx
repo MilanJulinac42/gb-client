@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Container from "../components/container/Container";
 import Navbar from "../layout/navbar/Navbar";
@@ -8,8 +8,14 @@ import Benefits from "../layout/benefits/Benefits";
 import HomePageCategoriesSection from "../layout/homePageCategoriesSection/HomePageCategoriesSection";
 import Shipping from "../layout/shipping/Shipping";
 import Footer from "../layout/footer/Footer";
+import axios from "axios";
 
-const Home: NextPage = () => {
+interface HomeProps {
+  settingsData: any;
+}
+
+const Home: NextPage<HomeProps> = ({ settingsData }) => {
+
   return (
     <div>
       <Head>
@@ -25,10 +31,10 @@ const Home: NextPage = () => {
       <Navbar></Navbar>
       <main>
         <Container color="#364f6b">
-          <Hero></Hero>
+          <Hero heroTitle={settingsData.settings.heroTitle}></Hero>
         </Container>
         <Container color="#fff2cc" heading="Pogledajte neke od nasih proizvoda">
-          <LandingPageGallery />
+          <LandingPageGallery giftBasketsGallery={settingsData.settings.giftBasketsGallery} />
         </Container>
         <Container color="#b2d8d8" heading="Benefits and stuff and other stuff">
           <Benefits></Benefits>
@@ -44,5 +50,28 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  try {
+    const response = await axios.get('http://localhost:9090/settings/find');
+    const settingsData = response.data;
+
+    return {
+      props: {
+        settingsData,
+      },
+      revalidate: false,
+    };
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return {
+      props: {
+        settingsData: null,
+      },
+      revalidate: false,
+    };
+  }
+};
+
 
 export default Home;

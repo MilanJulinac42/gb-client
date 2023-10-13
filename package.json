@@ -19,6 +19,7 @@
     "@rcaferati/wac": "^1.0.0",
     "@types/react-slick": "^0.23.10",
     "@types/slick-carousel": "^1.6.38",
+    "axios": "^1.5.1",
     "classnames": "^2.3.2",
     "hamburger-react": "^2.5.0",
     "next": "13.4.12",

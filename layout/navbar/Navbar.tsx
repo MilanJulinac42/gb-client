@@ -39,7 +39,7 @@ export default function Navbar() {
             <Link href="/baskets">Baskets</Link>
           </li>
           <li className={styles.c3}>
-            <Link href="/about">About Us</Link>
+            <Link href="/AboutUs">About Us</Link>
           </li>
           <li className={styles.c4}>
             <Link href="/contact">Contact Us</Link>

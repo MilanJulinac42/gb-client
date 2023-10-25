@@ -13,7 +13,6 @@ const SearchBar: React.FC = () => {
     try {
       setIsLoading(true);
       const response = await axios.get("http://localhost:9090/gift-basket/baskets-names");
-      console.log(response.data.baskets)
       setProductOptions(response.data.baskets);
       setIsLoading(false);
     } catch (error) {

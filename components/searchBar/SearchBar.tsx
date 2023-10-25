@@ -12,7 +12,9 @@ const SearchBar: React.FC = () => {
   const handleSelectClick = async () => {
     try {
       setIsLoading(true);
-      const response = await axios.get("http://localhost:9090/gift-basket/baskets-names");
+      const response = await axios.get(
+        "http://localhost:9090/gift-basket/baskets-names"
+      );
       setProductOptions(response.data.baskets);
       setIsLoading(false);
     } catch (error) {
@@ -42,17 +44,13 @@ const SearchBar: React.FC = () => {
           <FontAwesomeIcon icon={faSearch} />
         </span>
       </div>
-      <select>
-        <option value="" disabled>
-          Select
-        </option>
-        {isLoading && <option value="">Loading...</option>}
+      <div className={styles.basketBoxWrapper}>
         {filteredOptions.map((option, index) => (
-          <option key={index} value={option.name}>
+          <div key={index} className={styles.basketNameWrapper}>
             {option.name}
-          </option>
+          </div>
         ))}
-      </select>
+      </div>
     </div>
   );
 };

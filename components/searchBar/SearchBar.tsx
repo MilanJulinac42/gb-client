@@ -21,7 +21,7 @@ const SearchBar: React.FC = () => {
         "http://localhost:9090/gift-basket/baskets-names"
       );
       setProductOptions(response.data.baskets);
-      setShowBasketBox(true)
+      setShowBasketBox(true);
       setIsLoading(false);
     } catch (error) {
       console.error("Error fetching product options", error);
@@ -35,6 +35,11 @@ const SearchBar: React.FC = () => {
   const filteredOptions = productOptions.filter((option) =>
     option.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const handleOptionClick = (optionName: string) => {
+    setSearchQuery(optionName);
+    setShowBasketBox(false);
+  };
 
   return (
     <div className={styles.searchBar} ref={searchBarRef}>
@@ -53,7 +58,11 @@ const SearchBar: React.FC = () => {
       {showBasketBox && (
         <div className={styles.basketBoxWrapper}>
           {filteredOptions.map((option, index) => (
-            <div key={index} className={styles.basketNameWrapper}>
+            <div
+              key={index}
+              className={styles.basketNameWrapper}
+              onClick={() => handleOptionClick(option.name)}
+            >
               {option.name}
             </div>
           ))}

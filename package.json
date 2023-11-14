@@ -23,8 +23,7 @@
     "classnames": "^2.3.2",
     "hamburger-react": "^2.5.0",
     "next": "13.4.12",
-    "nouislider": "^15.7.1",
-    "nouislider-react": "^3.4.1",
+    "rc-slider": "^10.4.0",
     "react": "18.2.0",
     "react-awesome-slider": "^4.1.0",
     "react-dom": "18.2.0",
@@ -35,7 +34,6 @@
   },
   "devDependencies": {
     "@types/node": "20.4.5",
-    "@types/nouislider": "^15.0.0",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
     "eslint": "8.46.0",

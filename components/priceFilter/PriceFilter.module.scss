@@ -1,0 +1,33 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $medium-spacing;
+}
+
+.valueWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: $medium-spacing;
+}
+
+.values {
+  display: flex;
+  gap: $small-spacing;
+  align-items: center;
+  font-size: $small-font;
+  max-width: 100px;
+
+  &:nth-child(2) {
+    margin-left: 80px;
+  }
+}
+
+.box {
+  border: none;
+  background: transparent;
+  font-size: $small-font;
+  width: calc(6ch + 10px);
+}

@@ -7,6 +7,13 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
+"@babel/runtime@^7.10.1", "@babel/runtime@^7.18.3":
+  version "7.23.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.2.tgz#062b0ac103261d68a966c4c7baf2ae3e62ec3885"
+  integrity sha512-mM8eg4yl5D6i3lu2QKPuPH4FArvJ8KhTofbE7jwMUv9KX5mBvwPAqnV3MlyBNqdp9RyRKP6Yck8TrfYrPvX3bg==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/runtime@^7.20.7":
   version "7.22.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.6.tgz#57d64b9ae3cff1d67eb067ae117dac087f5bd438"
@@ -238,13 +245,6 @@
   version "20.4.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.5.tgz#9dc0a5cb1ccce4f7a731660935ab70b9c00a5d69"
   integrity sha512-rt40Nk13II9JwQBdeYqmbn2Q6IVTA5uPhvSO+JVqdXw/6/4glI6oR9ezty/A9Hg5u7JH4OmYmuQ+XvjKm0Datg==
-
-"@types/nouislider@^15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@types/nouislider/-/nouislider-15.0.0.tgz#de1915ce34ea82bc8a9187249fbdbaa6999ad81c"
-  integrity sha512-CgBRRaaoR09F+yIp3y222atrs8+e2fDv0sFJmhhgJP9fvKfoZsKHX10oBMe/Y3toZ4obIY+CMirfGeli+aoKwg==
-  dependencies:
-    nouislider "*"
 
 "@types/prop-types@*":
   version "15.7.5"
@@ -1789,23 +1789,6 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
-nouislider-react@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/nouislider-react/-/nouislider-react-3.4.1.tgz#cb0fc3d77ed8f7818cf52b614f0d67f3e16275d4"
-  integrity sha512-ryVbcApz6sELqPPiWwEOq5pkwhHYoNSxmGpP/HXHptpB6A6XedMrM/BP5W/rHRtBBaFK7vJTCTTma6gKviEiNg==
-  dependencies:
-    nouislider "^14.6.3"
-
-nouislider@*, nouislider@^15.7.1:
-  version "15.7.1"
-  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-15.7.1.tgz#77d55e47d9b4cd771728515713df43b489db9705"
-  integrity sha512-5N7C1ru/i8y3dg9+Z6ilj6+m1EfabvOoaRa7ztpxBSKKRZso4vA52DGSbBJjw5XLtFr/LZ9SgGAXqyVtlVHO5w==
-
-nouislider@^14.6.3:
-  version "14.7.0"
-  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-14.7.0.tgz#a71db0587c92567b6da1df57d251d3696d942362"
-  integrity sha512-4RtQ1+LHJKesDCNJrXkQcwXAWCrC2aggdLYMstS/G5fEWL+fXZbUA9pwVNHFghMGuFGRATlDLNInRaPeRKzpFQ==
-
 npm-run-path@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-4.0.1.tgz#b7ecd1e5ed53da8e37a55e1c2269e0b97ed748ea"
@@ -2032,6 +2015,23 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+rc-slider@^10.4.0:
+  version "10.4.0"
+  resolved "https://registry.yarnpkg.com/rc-slider/-/rc-slider-10.4.0.tgz#efc016583fdea5f5dfb4f3dc61b6755a19e5f453"
+  integrity sha512-ZlpWjFhOlEf0w4Ng31avFBkXNNBj60NAcTPaIoiCxBkJ29wOtHSPMqv9PZeEoqmx64bpJkgK7kPa47HG4LPzww==
+  dependencies:
+    "@babel/runtime" "^7.10.1"
+    classnames "^2.2.5"
+    rc-util "^5.27.0"
+
+rc-util@^5.27.0:
+  version "5.38.1"
+  resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.38.1.tgz#4915503b89855f5c5cd9afd4c72a7a17568777bb"
+  integrity sha512-e4ZMs7q9XqwTuhIK7zBIVFltUtMSjphuPPQXHoHlzRzNdOwUxDejo0Zls5HYaJfRKNURcsS/ceKVULlhjBrxng==
+  dependencies:
+    "@babel/runtime" "^7.18.3"
+    react-is "^18.2.0"
+
 react-awesome-slider@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/react-awesome-slider/-/react-awesome-slider-4.1.0.tgz#6a800300cb3edd556d2388090f65ac731467639a"
@@ -2058,6 +2058,11 @@ react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-is@^18.2.0:
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
+  integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
 react-responsive-carousel@^3.2.23:
   version "3.2.23"
@@ -2107,6 +2112,11 @@ regenerator-runtime@^0.13.11:
   version "0.13.11"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+
+regenerator-runtime@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz#5e19d68eb12d486f797e15a3c6a918f7cec5eb45"
+  integrity sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==
 
 regexp.prototype.flags@^1.4.3, regexp.prototype.flags@^1.5.0:
   version "1.5.0"

@@ -1,49 +1,48 @@
-import { useEffect, useRef } from "react";
-import * as noUiSlider from "nouislider";
-import Nouislider from "nouislider-react";
-import "nouislider/dist/nouislider.css";
+import React, { useEffect, useRef, useState } from "react";
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
 import styles from "./PriceFilter.module.scss";
 
 const PriceFilter: React.FC = () => {
-  let minPrice = 0;
-  let maxPrice = 1000;
+  const [range, setRange] = useState<[number, number]>([0, 10000]);
 
-  const minPriceInputRef = useRef<HTMLInputElement>(null);
-  const maxPriceInputRef = useRef<HTMLInputElement>(null);
-  const priceSliderRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const minPriceInput = minPriceInputRef.current;
-    const maxPriceInput = maxPriceInputRef.current;
-    const priceSlider = priceSliderRef.current;
-
-    if (!minPriceInput || !maxPriceInput || !priceSlider) return;
-
-    const slider = noUiSlider.create(priceSlider, {
-      start: [minPrice, maxPrice],
-      connect: true,
-      range: {
-        min: 0,
-        max: 1000,
-      },
-    });
-
-    slider.on("update", (values: any, handle) => {
-      const parsedValue = parseInt(values[handle], 10);
-
-      if (handle === 0) {
-        minPrice = parsedValue;
-        minPriceInput.value = String(minPrice);
-      } else {
-        maxPrice = parsedValue;
-        maxPriceInput.value = String(maxPrice);
-      }
-    });
-  }, []);
+  const handleSliderChange = (newRange: number | number[]) => {
+    if (Array.isArray(newRange)) {
+      setRange(newRange as [number, number]);
+    }
+  };
 
   return (
-    <div className={styles.priceFilterContainer}>
-      <Nouislider start={15} range={{ min: 0, max: 150 }} tooltips={true} />
+    <div className={styles.container}>
+      <h4>Price</h4>
+      <div className={styles.valueWrapper}>
+        <div className={styles.values}>
+          <span>$</span>
+          <input
+            className={styles.box}
+            type="number"
+            value={range[0]}
+            readOnly
+          />
+        </div>
+        <div className={styles.values}>
+          <span>$</span>
+          <input
+            className={styles.box}
+            type="number"
+            value={range[1]}
+            readOnly
+          />
+        </div>
+      </div>
+      <Slider
+        min={0}
+        max={10000}
+        step={1}
+        range
+        value={range}
+        onChange={handleSliderChange}
+      />
     </div>
   );
 };

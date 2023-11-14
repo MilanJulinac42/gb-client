@@ -30,3 +30,22 @@ a {
 ::-webkit-scrollbar-thumb {
   background-color: $secondary-coral-color;
 }
+
+.rc-slider {
+  .rc-slider-track {
+    background-color: black !important;
+  }
+
+  .rc-slider-handle {
+    border: 2px solid black !important;
+    background-color: black !important;
+  }
+
+  .rc-slider-dot {
+    background-color: black !important;
+  }
+
+  .rc-slider-mark-text {
+    color: black !important;
+  }
+}

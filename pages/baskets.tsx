@@ -4,6 +4,7 @@ import Navbar from "../layout/navbar/Navbar";
 import Footer from "../layout/footer/Footer";
 import ProductHeading from "../components/productHeading/ProductHeading";
 import SearchBar from "../components/searchBar/SearchBar";
+import Filters from "../layout/filters/Filters";
 
 const Baskets: React.FC = () => {
   return (
@@ -12,6 +13,9 @@ const Baskets: React.FC = () => {
       <div className={styles.wrapper}>
         <ProductHeading></ProductHeading>
         <SearchBar></SearchBar>
+        <Filters />
+        {/* sorting */}
+        {/* baskets list */}
       </div>
       <Footer></Footer>
     </>

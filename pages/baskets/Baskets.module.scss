@@ -1,8 +1,12 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/variables.scss";
 
-.wrapper {
-    width: 80%;
-    margin: auto;
-    padding: $extra-large-padding 0;
+.container {
+  width: 80%;
+  margin: auto;
+  padding: $extra-large-padding 0;
+}
+
+.sortAndSearchWrapper {
+  display: flex;
 }

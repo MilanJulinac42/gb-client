@@ -10,12 +10,16 @@ const Baskets: React.FC = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className={styles.wrapper}>
+      <div className={styles.container}>
         <ProductHeading></ProductHeading>
-        <SearchBar></SearchBar>
-        <Filters />
-        {/* sorting */}
-        {/* baskets list */}
+        <div className={styles.sortAndSearchWrapper}>
+          <SearchBar></SearchBar>
+          {/* sorting */}
+        </div>
+        <div className={styles.listAndFiltersWrapper}>
+          <Filters />
+          {/* baskets list */}
+        </div>
       </div>
       <Footer></Footer>
     </>

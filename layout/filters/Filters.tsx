@@ -1,14 +1,14 @@
-import { useEffect, useRef } from "react";
-import styles from "./Filters.module.scss";
+import React from "react";
+import BasketTypeFilter from "../../components/basketTypeFilter/BasketTypeFilter";
 import PriceFilter from "../../components/priceFilter/PriceFilter";
-import CheckboxFilter from "../../components/checkboxFilter/CheckboxFilter";
+import styles from "./Filters.module.scss";
 
 const Filters: React.FC = () => {
   return (
     <div className={styles.container}>
       <h2>Filters</h2>
       <PriceFilter />
-      <CheckboxFilter />
+      <BasketTypeFilter />
     </div>
   );
 };

@@ -2,8 +2,11 @@
 @import "../../styles/variables.scss";
 
 .container {
-  max-width: 15%;
+  max-width: 20%;
   display: flex;
   flex-direction: column;
   gap: $large-spacing;
+  background-color: #33333310;
+  padding: $extra-large-padding;
+  border-radius: 10px;
 }

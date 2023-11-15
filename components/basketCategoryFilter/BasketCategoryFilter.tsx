@@ -1,11 +1,11 @@
 // CheckboxFilter.tsx
 import React, { useState } from "react";
-import styles from "./BasketTypeFilter.module.scss";
+import styles from "./BasketCategoryFilter.module.scss";
 import CustomCheckbox from "../checkbox/Checkbox";
 
-const basketTypes = ["Tin", "Round", "Box", "Crate"];
+const basketTypes = ["Family", "Fruit", "Vegetable", "Picnic", "Coorporate"];
 
-const BasketTypeFilter: React.FC = () => {
+const BasketCategoryFilter: React.FC = () => {
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
 
   const handleCheckboxChange = (type: string) => {
@@ -18,7 +18,7 @@ const BasketTypeFilter: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <h4>Basket Type</h4>
+      <h4>Basket Category</h4>
       <div className={styles.checkboxList}>
         {basketTypes.map((type) => (
           <CustomCheckbox
@@ -33,4 +33,4 @@ const BasketTypeFilter: React.FC = () => {
   );
 };
 
-export default BasketTypeFilter;
+export default BasketCategoryFilter;

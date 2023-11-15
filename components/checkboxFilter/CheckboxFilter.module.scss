@@ -1,0 +1,9 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.checkboxList {
+  margin-top: $medium-spacing;
+  display: flex;
+  flex-direction: column;
+  gap: $medium-spacing;
+}

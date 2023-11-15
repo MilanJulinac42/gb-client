@@ -1,35 +1,33 @@
-import React from "react";
+// CheckboxFilter.tsx
+import React, { ChangeEvent, useState } from "react";
 import styles from "./CheckboxFilter.module.scss";
+import CustomCheckbox from "../checkbox/Checkbox";
+
+const basketTypes = ["Family", "Fruit", "Vegetable", "Picnic"];
 
 const CheckboxFilter: React.FC = () => {
+  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+
+  const handleCheckboxChange = (type: string) => {
+    if (selectedTypes.includes(type)) {
+      setSelectedTypes(selectedTypes.filter((t) => t !== type));
+    } else {
+      setSelectedTypes([...selectedTypes, type]);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <h4>Basket Type</h4>
       <div className={styles.checkboxList}>
-        <div className={styles.checkboxWrapper}>
-          <label>
-            <input type="checkbox" value={"Tin"} />
-            Tin
-          </label>
-        </div>
-        <div className={styles.checkboxWrapper}>
-          <label>
-            <input type="checkbox" value={"Round"} />
-            Round
-          </label>
-        </div>
-        <div className={styles.checkboxWrapper}>
-          <label>
-            <input type="checkbox" value={"Spurce"} />
-            Spurce
-          </label>
-        </div>
-        <div className={styles.checkboxWrapper}>
-          <label>
-            <input type="checkbox" value={"Classic"} />
-            Classic
-          </label>
-        </div>
+        {basketTypes.map((type) => (
+          <CustomCheckbox
+            key={type}
+            label={type}
+            isChecked={selectedTypes.includes(type)}
+            onChange={() => handleCheckboxChange(type)}
+          />
+        ))}
       </div>
     </div>
   );

@@ -3,10 +3,18 @@
 
 .container {
   max-width: 20%;
+}
+
+.heading {
+  font-size: $medium-font;
+}
+
+.filtersWrapper {
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: $large-spacing;
   background-color: #33333310;
   padding: $extra-large-padding;
-  border-radius: 10px;
+  margin-top: $large-margin;
 }

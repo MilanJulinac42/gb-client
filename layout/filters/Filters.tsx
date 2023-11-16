@@ -7,10 +7,12 @@ import BasketCategoryFilter from "../../components/basketCategoryFilter/BasketCa
 const Filters: React.FC = () => {
   return (
     <div className={styles.container}>
-      <h2>Filters</h2>
-      <PriceFilter />
-      <BasketTypeFilter />
-      <BasketCategoryFilter />
+      <h2 className={styles.heading}>Filters</h2>
+      <div className={styles.filtersWrapper}>
+        <PriceFilter />
+        <BasketTypeFilter />
+        <BasketCategoryFilter />
+      </div>
     </div>
   );
 };

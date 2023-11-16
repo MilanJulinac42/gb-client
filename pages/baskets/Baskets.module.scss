@@ -8,7 +8,9 @@
 }
 
 .sortAndSearchWrapper {
+  margin-top: $extra-large-margin;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-bottom: $extra-large-margin;
+  gap: $large-spacing;
 }

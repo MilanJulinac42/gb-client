@@ -1,0 +1,46 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.sortBy {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  cursor: pointer;
+  font-size: $medium-font;
+}
+
+.selectedOption {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: $medium-padding;
+  width: 320px;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+
+  div {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.dropdown:hover .options {
+  display: block;
+}

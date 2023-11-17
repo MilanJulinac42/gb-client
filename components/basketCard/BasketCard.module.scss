@@ -1,0 +1,40 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.container {
+  margin-bottom: $medium-margin;
+  width: 47%;
+
+  @include breakpoint("small") {
+    width: 32%;
+  }
+}
+
+.image {
+  object-fit: contain;
+  border: 1px solid $border-color;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.192);
+  width: 100%;
+  height: auto;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.type {
+  color: $logo-color;
+  text-decoration: underline;
+}
+
+.name {
+  color: $text-color;
+}
+
+.price {
+  border: 1px solid $border-color;
+  text-align: center;
+  padding: 2px 0;
+  font-style: bold;
+}

@@ -7,10 +7,31 @@
   padding: $extra-large-padding 0;
 }
 
-.sortAndSearchWrapper {
+.wrapper {
   margin-top: $extra-large-margin;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: $extra-large-margin;
   gap: $large-spacing;
+}
+
+.listAndFiltersWrapper {
+  display: flex;
+}
+
+.test2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: $medium-spacing;
+}
+
+.test {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.filtersWrapper {
+  width: 20%;
 }

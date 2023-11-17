@@ -2,7 +2,8 @@
 @import "../../styles/variables.scss";
 
 .container {
-  max-width: 20%;
+  position: sticky;
+  top: 10%;
 }
 
 .heading {

@@ -24,8 +24,16 @@
     height: 100%;
     padding: $medium-padding 0;
     outline: none;
-    font-size: $medium-font;
+    font-size: $small-font;
     cursor: pointer;
+
+    @include breakpoint("medium") {
+      font-size: $small-font;
+    }
+
+    @include breakpoint("xlarge") {
+      font-size: $medium-font;
+    }
   }
 }
 
@@ -38,7 +46,15 @@
 
 .basketNameWrapper {
   padding: $medium-padding;
-  font-size: $medium-font;
+  font-size: $small-font;
+
+  @include breakpoint("medium") {
+    font-size: $small-font;
+  }
+
+  @include breakpoint("xlarge") {
+    font-size: $medium-font;
+  }
 
   &:hover {
     background-color: $border-color;

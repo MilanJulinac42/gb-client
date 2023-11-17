@@ -2,9 +2,15 @@
 @import "../../styles/variables.scss";
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: auto;
-  padding: $extra-large-padding 0;
+  padding: $extra-large-padding $medium-padding;
+
+  @include breakpoint("xlarge") {
+    margin: auto;
+    padding: $extra-large-padding 0;
+    width: 80%;
+  }
 }
 
 .wrapper {
@@ -33,5 +39,18 @@
 }
 
 .filtersWrapper {
-  width: 20%;
+  width: auto;
+  display: none;
+
+  @include breakpoint("medium") {
+    display: none;
+  }
+
+  @include breakpoint("large") {
+    display: block;
+  }
+
+  @include breakpoint("xlarge") {
+    width: auto;
+  }
 }

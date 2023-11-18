@@ -2,7 +2,8 @@
 @import "../../styles/variables.scss";
 
 .checkboxList {
-  margin-top: $medium-spacing;
+  margin-top: $large-margin;
+  padding-left: $small-padding;
   display: flex;
   flex-direction: column;
   gap: $medium-spacing;

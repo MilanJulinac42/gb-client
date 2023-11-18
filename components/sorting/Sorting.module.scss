@@ -2,8 +2,12 @@
 @import "../../styles/variables.scss";
 
 .sortBy {
-  display: flex;
   align-items: center;
+  display: none;
+
+  @include breakpoint("large") {
+    display: flex;
+  }
 }
 
 .wrapper {
@@ -28,11 +32,7 @@
   padding: $medium-padding;
   width: 220px;
 
-  @include breakpoint("medium") {
-    width: 220px;
-  }
-
-  @include breakpoint("large") {
+  @include breakpoint("xlarge") {
     width: 320px;
   }
 }

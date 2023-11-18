@@ -49,6 +49,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
 }
 
 .closeButton {
@@ -87,6 +88,8 @@
 .buttons {
   display: flex;
   width: 100%;
+  position: fixed;
+  bottom: 0px;
 }
 
 .button {

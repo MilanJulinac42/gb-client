@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import BasketTypeFilter from "../../components/basketTypeFilter/BasketTypeFilter";
 import PriceFilter from "../../components/priceFilter/PriceFilter";
 import BasketCategoryFilter from "../../components/basketCategoryFilter/BasketCategoryFilter";
-import styles from "./Filters.module.scss";
+import classNames from "classnames";
 import useWindowSize from "../../hooks/useWindowSize";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from "./Filters.module.scss";
 
 const Filters: React.FC = () => {
   const { isMobile } = useWindowSize();
@@ -25,9 +28,11 @@ const Filters: React.FC = () => {
             Filters
           </button>
           {showModal && (
-            <div className={styles.modal}>
+            <div
+              className={classNames(styles.modal, { [styles.open]: showModal })}
+            >
               <button className={styles.closeButton} onClick={closeModal}>
-                X
+                <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
               </button>
               <div className={styles.modalContainer}>
                 <h2 className={styles.modalHeading}>Filters</h2>
@@ -42,6 +47,14 @@ const Filters: React.FC = () => {
                     <BasketCategoryFilter />
                   </div>
                 </div>
+              </div>
+              <div className={styles.buttons}>
+                <button className={classNames(styles.button, styles.apply)}>
+                  APPLY
+                </button>
+                <button className={classNames(styles.button, styles.cancel)}>
+                  CANCEL
+                </button>
               </div>
             </div>
           )}

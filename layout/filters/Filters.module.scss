@@ -46,6 +46,7 @@
   z-index: 100000000;
   background-color: $white-color;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -54,6 +55,8 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  border: none;
+  font-size: $medium-font;
 }
 
 .modalContainer {
@@ -79,4 +82,30 @@
 .border {
   border-bottom: 1px solid $border-color;
   padding-bottom: $extra-large-padding;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+}
+
+.button {
+  width: 50%;
+  padding: $large-padding;
+  font-size: $small-font;
+  font-weight: 700;
+}
+
+.cancel {
+  color: $black-color;
+  background-color: $white-color;
+  border: none;
+  border-top: 1px solid $black-color;
+}
+
+.apply {
+  color: $white-color;
+  background-color: $black-color;
+  border: none;
+  border-top: 1px solid $black-color;
 }

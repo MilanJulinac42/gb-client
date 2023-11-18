@@ -7,27 +7,42 @@ import SearchBar from "../components/searchBar/SearchBar";
 import Filters from "../layout/filters/Filters";
 import Sorting from "../components/sorting/Sorting";
 import BasketCardList from "../layout/basketCardList/BasketCardList";
+import useWindowSize from "../hooks/useWindowSize";
 
 const Baskets: React.FC = () => {
+  const { isMobile } = useWindowSize();
+
   return (
     <>
       <Navbar></Navbar>
-      <div className={styles.container}>
-        <ProductHeading></ProductHeading>
-        <div className={styles.wrapper}>
-          <div className={styles.filtersWrapper}>
+      {isMobile ? (
+        <div className={styles.mobileContainer}>
+          <ProductHeading></ProductHeading>
+          <div className={styles.mobileWrapper}>
             <Filters />
+            <SearchBar />
+            <Sorting />
           </div>
-          <div className={styles.test}>
-            <div className={styles.test2}>
-              <SearchBar />
-              <Sorting />
-            </div>
-            <BasketCardList />
-          </div>
+          <BasketCardList />
         </div>
-        <div className={styles.listAndFiltersWrapper}></div>
-      </div>
+      ) : (
+        <div className={styles.container}>
+          <ProductHeading></ProductHeading>
+          <div className={styles.wrapper}>
+            <div className={styles.filtersWrapper}>
+              <Filters />
+            </div>
+            <div className={styles.test}>
+              <div className={styles.test2}>
+                <SearchBar />
+                <Sorting />
+              </div>
+              <BasketCardList />
+            </div>
+          </div>
+          <div className={styles.listAndFiltersWrapper}></div>
+        </div>
+      )}
       <Footer></Footer>
     </>
   );

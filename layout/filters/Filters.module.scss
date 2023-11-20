@@ -30,7 +30,15 @@
 }
 
 .modalButton {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $small-font;
+  gap: $extra-large-margin;
+  padding: $medium-padding $medium-padding;
+  border: none;
+  background-color: #33333310;
+  width: 45%;
 
   @include breakpoint("large") {
     display: none;

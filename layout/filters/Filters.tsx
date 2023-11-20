@@ -4,7 +4,7 @@ import PriceFilter from "../../components/priceFilter/PriceFilter";
 import BasketCategoryFilter from "../../components/basketCategoryFilter/BasketCategoryFilter";
 import classNames from "classnames";
 import useWindowSize from "../../hooks/useWindowSize";
-import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Filters.module.scss";
 
@@ -27,7 +27,8 @@ const Filters: React.FC = () => {
       {isMobile ? (
         <>
           <button className={styles.modalButton} onClick={() => openModal()}>
-            Filters
+            <span>Filters</span>{" "}
+            <FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>
           </button>
           {showModal && (
             <div

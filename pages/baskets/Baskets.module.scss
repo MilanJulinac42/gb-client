@@ -55,3 +55,13 @@
     width: auto;
   }
 }
+
+.mobileFiltersWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 $medium-padding;
+}
+
+.mobileWrapper {
+  margin-bottom: $large-margin;
+}

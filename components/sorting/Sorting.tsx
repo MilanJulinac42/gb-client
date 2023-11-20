@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./Sorting.module.scss";
 import useWindowSize from "../../hooks/useWindowSize";
 import classNames from "classnames";
-import { faClose } from "@fortawesome/free-solid-svg-icons";
+import { faClose, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import RadioButton from "../radioButton/RadioButton";
 
@@ -38,7 +38,8 @@ const Sorting: React.FC = () => {
       {isMobile ? (
         <>
           <button className={styles.modalButton} onClick={() => openModal()}>
-            Sorting
+            <span>Sorting</span>{" "}
+            <FontAwesomeIcon icon={faChevronDown}></FontAwesomeIcon>
           </button>
           {showModal && (
             <div

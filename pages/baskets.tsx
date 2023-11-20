@@ -20,8 +20,10 @@ const Baskets: React.FC = () => {
           <ProductHeading></ProductHeading>
           <div className={styles.mobileWrapper}>
             <SearchBar />
-            <Filters />
-            <Sorting />
+            <div className={styles.mobileFiltersWrapper}>
+              <Filters />
+              <Sorting />
+            </div>
           </div>
           <BasketCardList />
         </div>

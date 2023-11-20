@@ -23,9 +23,9 @@
   margin-top: $large-margin;
   display: flex;
   flex-wrap: wrap;
-  // gap: $large-padding;
   align-items: center;
   justify-content: space-between;
+  padding: 0 $medium-padding;
 
   @include breakpoint("medium") {
     margin-top: $small-margin;

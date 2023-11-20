@@ -84,6 +84,14 @@ const Sorting: React.FC = () => {
                     selectedOption={selectedOption}
                     handleOptionChange={handleOptionChange}
                   />
+                  <RadioButton
+                    option={{
+                      label: "Popularity",
+                      value: "Sort by Popularity",
+                    }}
+                    selectedOption={selectedOption}
+                    handleOptionChange={handleOptionChange}
+                  />
                 </div>
               </div>
             </div>
@@ -129,6 +137,14 @@ const Sorting: React.FC = () => {
                   option={{
                     label: "Name: (Z-A)",
                     value: "Sort by Name: (Z-A)",
+                  }}
+                  selectedOption={selectedOption}
+                  handleOptionChange={handleOptionChange}
+                />
+                <RadioButton
+                  option={{
+                    label: "Popularity",
+                    value: "Sort by Popularity",
                   }}
                   selectedOption={selectedOption}
                   handleOptionChange={handleOptionChange}

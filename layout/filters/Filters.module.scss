@@ -112,3 +112,7 @@
   border: none;
   border-top: 1px solid $black-color;
 }
+
+.noScroll {
+  overflow: hidden;
+}

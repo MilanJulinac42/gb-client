@@ -14,10 +14,12 @@ const Filters: React.FC = () => {
 
   const openModal = () => {
     setShowModal(true);
+    document.body.classList.add(styles.noScroll);
   };
 
   const closeModal = () => {
     setShowModal(false);
+    document.body.classList.remove(styles.noScroll);
   };
 
   return (

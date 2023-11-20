@@ -2,10 +2,12 @@
 @import "../../styles/variables.scss";
 
 .searchBar {
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
   gap: $medium-spacing;
+  padding: $medium-padding;
+  position: relative;
 
   @include breakpoint("large") {
     display: flex;
@@ -20,6 +22,7 @@
   border: 1px solid $border-color;
   padding: 0 $medium-padding;
   cursor: pointer;
+  border-radius: 10px;
 
   input {
     border: 0;
@@ -46,6 +49,15 @@
   height: auto;
   max-height: 300px;
   overflow: scroll;
+  position: absolute;
+  top: 70px;
+  width: calc(100% - $medium-padding - $medium-padding);
+  z-index: 1000000000000;
+  background-color: $white-color;
+
+  @include breakpoint("xlarge") {
+    top: 80px;
+  }
 }
 
 .basketNameWrapper {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./baskets/Baskets.module.scss";
 import Navbar from "../layout/navbar/Navbar";
 import Footer from "../layout/footer/Footer";
@@ -19,8 +19,8 @@ const Baskets: React.FC = () => {
         <div className={styles.mobileContainer}>
           <ProductHeading></ProductHeading>
           <div className={styles.mobileWrapper}>
-            <Filters />
             <SearchBar />
+            <Filters />
             <Sorting />
           </div>
           <BasketCardList />

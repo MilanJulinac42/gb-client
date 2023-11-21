@@ -12,9 +12,7 @@ export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <nav
-      className={styles.navbar}
-    >
+    <nav className={styles.navbar}>
       <div className={styles.logoContainerSmall}>
         <div className={styles.test}>
           <span>
